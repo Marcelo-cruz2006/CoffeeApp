@@ -1,14 +1,283 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="450.0" style="-fx-background-color: linear-gradient(#c89f81,#f5e6d3);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.akgui.homePageController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox prefHeight="42.0" prefWidth="398.0" style="-fx-background-color: #e5d3b3; -fx-background-radius: 25 25 40 40;" translateY="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="coffeLogo" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@coffeLogo.jpg" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="20.0" top="15.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label prefHeight="83.0" prefWidth="131.0" style="-fx-alignment: CENTER;" text="Mi Cafeteria">
+                     <HBox.margin>
+                        <Insets left="50.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.684085510688836">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.7368420958518982" green="0.5512670278549194" blue="0.04093567281961441" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <ImageView fx:id="notificationBell" fitHeight="39.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets left="40.0" top="35.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="@accImg.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+         </top>
+         <center>
+            <VBox prefHeight="408.0" prefWidth="337.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-alignment: CENTER; -fx-spacing: 40; -fx-background-color: #eaddca; -fx-background-radius: 50 50 50 50;">
+                     <children>
+                        <Label text="Hot Drinks">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="10.0" text="Cold Drinks">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="10.0" text="Bakery">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Black Coffee" />
+                              <ImageView fx:id="blackCoffee" fitHeight="60.0" fitWidth="56.0" onMouseClicked="#bcClicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@orderImgs/blackCoffee.jpeg" />
+                                 </image></ImageView>
+                              <Label text="\$3.00" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Hazel Nut cold" />
+                              <ImageView fx:id="hazelNutItem" fitHeight="60.0" fitWidth="80.0" onMouseClicked="#hncClicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@orderImgs/hazelLatte.jpeg" />
+                                 </image></ImageView>
+                              <Label text="\$2.00" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox layoutX="110.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="97.0" text="Chocolate Muffin" />
+                              <ImageView fitHeight="65.0" fitWidth="100.0" onMouseClicked="#chmClicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@orderImgs/ChocolateMuffin.jpeg" />
+                                 </image></ImageView>
+                              <Label text="\$3.00" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="118.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Cinnamon Coffee" />
+                              <ImageView fitHeight="100.0" fitWidth="80.0" onMouseClicked="#ccClicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@orderImgs/cinnamonCoffee.jpeg" />
+                                 </image></ImageView>
+                              <Label text="\$4.00" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Choc Smoothie" />
+                              <ImageView fitHeight="60.0" fitWidth="56.0" onMouseClicked="#chsClicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@orderImgs/ChocoSmooth.jpeg" />
+                                 </image></ImageView>
+                              <Label text="\$2.00" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox layoutX="110.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Croissant" />
+                              <ImageView fitHeight="60.0" fitWidth="80.0" onMouseClicked="#crossiantClicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@orderImgs/crossing.jpeg" />
+                                 </image></ImageView>
+                              <Label text="\$3.00" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="233.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Cappuccino" />
+                              <ImageView fitHeight="60.0" fitWidth="80.0" onMouseClicked="#cappClicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@orderImgs/cappuccinoCoffee.jpeg" />
+                                 </image></ImageView>
+                              <Label text="\$4.00" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Cold Coffee" />
+                              <ImageView fitHeight="60.0" fitWidth="56.0" onMouseClicked="#coldCoffeeClicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@orderImgs/coldCoffee.jpeg" />
+                                 </image></ImageView>
+                              <Label text="\$2.00" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox layoutX="110.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Cinna Bun" />
+                              <ImageView fitHeight="60.0" fitWidth="56.0" onMouseClicked="#cinnaBunClicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@orderImgs/CinnamonBun.jpeg" />
+                                 </image></ImageView>
+                              <Label text="\$3.00" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="40.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <Button mnemonicParsing="false" onAction="#ViewOrder" style="-fx-background-color: linear-gradient(#fdeebe,#fccf9f);" text="View Order" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="15.0" />
+               </BorderPane.margin>
+               <font>
+                  <Font size="23.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="0.684085510688836">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7368420958518982" green="0.5512670278549194" blue="0.04093567281961441" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5742645263671875" green="0.6299999952316284" blue="0.11969999969005585" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Button>
+         </bottom>
+      </BorderPane>
+      <ImageView fx:id="cart" fitHeight="56.0" fitWidth="62.0" layoutX="108.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="80.0">
+         <image>
+            <Image url="@newCart.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="amountOfItemsInCart" prefHeight="32.0" prefWidth="62.0" text="0" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="15.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button mnemonicParsing="false" onAction="#logOutTestRun" prefHeight="40.0" prefWidth="97.0" style="-fx-background-color: linear-gradient(#fdeebe,#fccf9f);" text="Log Out" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="10.0">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="usersBalanceDisplay" layoutY="47.0" prefHeight="20.0" prefWidth="56.0" text="0.00" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="47.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
