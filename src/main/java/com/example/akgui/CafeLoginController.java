@@ -1,5 +1,6 @@
 package com.example.akgui;
 
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -12,6 +13,12 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.ResourceBundle;
+
+/*
+CafeLoginController.java
+@author: Marcelo Cruz
+This class is the sign-in page where a user signs in with his or her account. Otherwise they can press the 'sign up' button if they don't have an account created.
+ */
 
 public class CafeLoginController implements Initializable {
 
@@ -45,23 +52,29 @@ public class CafeLoginController implements Initializable {
         } else {
             //this checks if username is true
             boolean userInList = false;
+            boolean userPass = false;
 
 
             for (int i = 0; i < loginPageUserNameData.size(); i++){
+                System.out.println("input text: "+ logIn_UserNameInput.getText());
+                System.out.println("username stored in arrayList text: "+ loginPageUserNameData.get(i).getUsername());
                 if (loginPageUserNameData.get(i).getUsername().equals(logIn_UserNameInput.getText())){
                     userInList = true;
                     selector = i;
+                } else {
+                    userInList=false;
                 }
             }
 
-            //just in case need this for loop back
-//            for (CafeAccount loginPageUserNameDatum : loginPageUserNameData) {
-//                if (logIn_UserNameInput.getText().equals(loginPageUserNameDatum.getUsername()) && LogIn_passwordInput.getText().equals(loginPageUserNameDatum.getPassword())) {
-//                    userInList = true;;
-//                }
-//            }
-
-            if (userInList) {
+            for (int i = 0; i < loginPageUserNameData.size(); i++){
+                if (loginPageUserNameData.get(i).getPassword().equals(LogIn_passwordInput.getText())){
+                    userPass = true;
+                    selector = i;
+                } else {
+                    userPass = false;
+                }
+            }
+            if (userInList && userPass) {
                 new SceneSwitchController(event, "homePage.fxml");
             } else {
                 alert.setTitle("ERROR MSG");

@@ -7,6 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
@@ -43,16 +44,206 @@
             </LinearGradient>
          </textFill>
       </Button>
-      <Label fx:id="item1" layoutX="44.0" layoutY="107.0" prefHeight="25.0" prefWidth="113.0" text="Label" />
-      <Label fx:id="item2" layoutX="44.0" layoutY="152.0" prefHeight="25.0" prefWidth="113.0" text="Label" />
-      <Label fx:id="item3" layoutX="44.0" layoutY="186.0" prefHeight="25.0" prefWidth="113.0" text="Label" />
-      <Label fx:id="item4" layoutX="44.0" layoutY="218.0" prefHeight="25.0" prefWidth="123.0" text="Label" />
-      <Label fx:id="item5" layoutX="44.0" layoutY="250.0" prefHeight="25.0" prefWidth="123.0" text="Label" />
-      <Label fx:id="item6" layoutX="44.0" layoutY="287.0" prefHeight="25.0" prefWidth="123.0" text="Label" />
-      <Label fx:id="item7" layoutX="44.0" layoutY="329.0" prefHeight="25.0" prefWidth="123.0" text="Label" />
-      <Label fx:id="item8" layoutX="44.0" layoutY="365.0" prefHeight="25.0" prefWidth="123.0" text="Label" />
-      <Label fx:id="item9" layoutX="44.0" layoutY="405.0" prefHeight="25.0" prefWidth="123.0" text="Label" />
-      <Label fx:id="item10" layoutX="44.0" layoutY="449.0" prefHeight="25.0" prefWidth="123.0" text="Label" />
+      <Label fx:id="item1" layoutX="34.0" layoutY="107.0" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: white;" text="Label">
+         <textFill>
+            <RadialGradient centerX="0.5221606648199446" centerY="0.4192399049881235" radius="0.9971098265895953">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5657894611358643" green="0.386622816324234" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5647059082984924" green="0.38823530077934265" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
+      <Label fx:id="item2" layoutX="34.0" layoutY="152.0" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: white;" text="Label">
+         <textFill>
+            <RadialGradient centerX="0.5221606648199446" centerY="0.4192399049881235" radius="0.9971098265895953">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5657894611358643" green="0.386622816324234" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5647059082984924" green="0.38823530077934265" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="item3" layoutX="34.0" layoutY="186.0" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: white;" text="Label">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5221606648199446" centerY="0.4192399049881235" radius="0.9971098265895953">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5657894611358643" green="0.386622816324234" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5647059082984924" green="0.38823530077934265" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <Label fx:id="item4" layoutX="34.0" layoutY="218.0" prefHeight="25.0" prefWidth="133.0" style="-fx-background-color: white;" text="Label">
+         <textFill>
+            <RadialGradient centerX="0.5221606648199446" centerY="0.4192399049881235" radius="0.9971098265895953">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5657894611358643" green="0.386622816324234" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5647059082984924" green="0.38823530077934265" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="item5" layoutX="34.0" layoutY="250.0" prefHeight="25.0" prefWidth="133.0" style="-fx-background-color: white;" text="Label">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5221606648199446" centerY="0.4192399049881235" radius="0.9971098265895953">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5657894611358643" green="0.386622816324234" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5647059082984924" green="0.38823530077934265" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <Label fx:id="item6" layoutX="34.0" layoutY="287.0" prefHeight="25.0" prefWidth="133.0" style="-fx-background-color: white;" text="Label">
+         <textFill>
+            <RadialGradient centerX="0.5221606648199446" centerY="0.4192399049881235" radius="0.9971098265895953">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5657894611358643" green="0.386622816324234" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5647059082984924" green="0.38823530077934265" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="item7" layoutX="34.0" layoutY="329.0" prefHeight="25.0" prefWidth="133.0" style="-fx-background-color: white;" text="Label">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5221606648199446" centerY="0.4192399049881235" radius="0.9971098265895953">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5657894611358643" green="0.386622816324234" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5647059082984924" green="0.38823530077934265" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
+      <Label fx:id="item8" layoutX="34.0" layoutY="365.0" prefHeight="25.0" prefWidth="133.0" style="-fx-background-color: white;" text="Label">
+         <textFill>
+            <RadialGradient centerX="0.5221606648199446" centerY="0.4192399049881235" radius="0.9971098265895953">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5657894611358643" green="0.386622816324234" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5647059082984924" green="0.38823530077934265" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="item9" layoutX="34.0" layoutY="405.0" prefHeight="25.0" prefWidth="133.0" style="-fx-background-color: white;" text="Label">
+         <textFill>
+            <RadialGradient centerX="0.5221606648199446" centerY="0.4192399049881235" radius="0.9971098265895953">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5657894611358643" green="0.386622816324234" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5647059082984924" green="0.38823530077934265" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <Label fx:id="item10" layoutX="34.0" layoutY="449.0" prefHeight="25.0" prefWidth="133.0" style="-fx-background-color: white;" text="Label">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5221606648199446" centerY="0.4192399049881235" radius="0.9971098265895953">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5657894611358643" green="0.386622816324234" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.5647059082984924" green="0.38823530077934265" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill></Label>
       <Label layoutX="41.0" layoutY="76.0" prefHeight="25.0" prefWidth="85.0" text="Items">
          <font>
             <Font size="18.0" />

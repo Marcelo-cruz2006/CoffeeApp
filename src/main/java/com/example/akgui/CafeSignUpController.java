@@ -5,6 +5,12 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
+/*
+CafeSignUpController.java
+@author: Marcelo Cruz
+This class is the sign-up for a user to create an account
+ */
+
 import java.io.IOException;
 
 public class CafeSignUpController {

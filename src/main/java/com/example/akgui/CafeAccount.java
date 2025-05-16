@@ -2,6 +2,12 @@ package com.example.akgui;
 
 import java.util.ArrayList;
 
+/*
+CafeAccount.java
+@author: Marcelo Cruz
+This class is where the account object data will be initialized when the constructor is called. Contains every feature an account can have in this app
+ */
+
 public class CafeAccount {
     private double balance;
     private String username;

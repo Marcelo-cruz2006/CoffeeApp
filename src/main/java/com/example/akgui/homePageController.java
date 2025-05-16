@@ -17,6 +17,12 @@ import java.util.ResourceBundle;
 
 import static com.example.akgui.CafeLoginController.selector;
 
+/*
+homePageController.java
+@author: Marcelo Cruz
+The class contains all the functions/methods for when the item is clicked. Will add to the users item cart, how much they need to pay, and update their balance.
+ */
+
 public class homePageController implements Initializable {
 
     @FXML

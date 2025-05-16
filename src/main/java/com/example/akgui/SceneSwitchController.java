@@ -10,6 +10,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/*
+SceneSwitchController.java
+@author: Marcelo Cruz
+The class serves as the functionality in switching between scenes (fxml files).
+ */
+
+
 public class SceneSwitchController {
     public SceneSwitchController(ActionEvent event,  String fxmlFile) throws IOException {
 

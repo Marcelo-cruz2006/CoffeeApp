@@ -10,13 +10,21 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Font;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.NoSuchElementException;
 import java.util.ResourceBundle;
 
 import static com.example.akgui.CafeLoginController.selector;
+
+/*
+ViewOrderController.java
+@author: Marcelo Cruz
+The class serves as a way to confirm the users purchases and declared finally their balance and then clear the item carts of the users account being active.
+ */
 
 public class ViewOrderController implements Initializable {
     @FXML
@@ -71,6 +79,8 @@ public class ViewOrderController implements Initializable {
     public void removeItem1(MouseEvent mouseEvent) {
         //manually move items down list in gui
 
+        // trying to implement try catch blocks
+
         double a = listContainer.accounts.get(selector).getAmountDue();
         double newAmount = a - Double.parseDouble(price1.getText());
         System.out.println(newAmount);
@@ -79,15 +89,25 @@ public class ViewOrderController implements Initializable {
 
         //totalAmount.setText(Double.toString(listContainer.accounts.get(selector).getAmountDue()));
 
+        //add code below to rest of items methods
+        try{
+            listContainer.accounts.get(selector).addedItems.removeFirst();
+            listContainer.accounts.get(selector).addedItemsPrices.removeFirst();
+            listContainer.accounts.get(selector).subtractAmountInCart();
+            listContainer.accounts.get(selector).returnMoney(Double.parseDouble(price1.getText()));
+        } catch (NoSuchElementException e){
+            System.err.println("error: removing non existent item");
+        }
 
-        listContainer.accounts.get(selector).addedItems.removeFirst();
-        listContainer.accounts.get(selector).addedItemsPrices.removeFirst();
+        //add code above to rest of items methods
+
+        //listContainer.accounts.get(selector).addedItems.removeFirst();
+        //listContainer.accounts.get(selector).addedItemsPrices.removeFirst();
 
 
 
-        listContainer.accounts.get(selector).subtractAmountInCart();
 
-        listContainer.accounts.get(selector).returnMoney(Double.parseDouble(price1.getText()));
+
 
         //do if statement first
 
@@ -142,11 +162,15 @@ public class ViewOrderController implements Initializable {
 
         //totalAmount.setText(Double.toString(listContainer.accounts.get(selector).getAmountDue()));
 
-        listContainer.accounts.get(selector).addedItems.remove(1);
-        listContainer.accounts.get(selector).addedItemsPrices.remove(1);
-        listContainer.accounts.get(selector).subtractAmountInCart();
+        try{
+            listContainer.accounts.get(selector).addedItems.remove(1);
+            listContainer.accounts.get(selector).addedItemsPrices.remove(1);
+            listContainer.accounts.get(selector).subtractAmountInCart();
+            listContainer.accounts.get(selector).returnMoney(Double.parseDouble(price2.getText()));
+        } catch (Exception e) {
+            System.err.println("error: removing non existent item");
+        }
 
-        listContainer.accounts.get(selector).returnMoney(Double.parseDouble(price2.getText()));
 
 
         //new code (debug test)
@@ -188,11 +212,14 @@ public class ViewOrderController implements Initializable {
 
         //totalAmount.setText(Double.toString(listContainer.accounts.get(selector).getAmountDue()));
 
-        listContainer.accounts.get(selector).addedItems.remove(2);
-        listContainer.accounts.get(selector).addedItemsPrices.remove(2);
-        listContainer.accounts.get(selector).subtractAmountInCart();
-
-        listContainer.accounts.get(selector).returnMoney(Double.parseDouble(price3.getText()));
+        try{
+            listContainer.accounts.get(selector).addedItems.remove(2);
+            listContainer.accounts.get(selector).addedItemsPrices.remove(2);
+            listContainer.accounts.get(selector).subtractAmountInCart();
+            listContainer.accounts.get(selector).returnMoney(Double.parseDouble(price3.getText()));
+        } catch (Exception e) {
+            System.err.println("error: removing non existent item");
+        }
 
         //new code (debug test)
         item3.setText(item4.getText());
@@ -229,11 +256,14 @@ public class ViewOrderController implements Initializable {
 
         //totalAmount.setText(Double.toString(listContainer.accounts.get(selector).getAmountDue()));
 
-        listContainer.accounts.get(selector).addedItems.remove(3);
-        listContainer.accounts.get(selector).addedItemsPrices.remove(3);
-        listContainer.accounts.get(selector).subtractAmountInCart();
-
-        listContainer.accounts.get(selector).returnMoney(Double.parseDouble(price4.getText()));
+        try{
+            listContainer.accounts.get(selector).addedItems.remove(3);
+            listContainer.accounts.get(selector).addedItemsPrices.remove(3);
+            listContainer.accounts.get(selector).subtractAmountInCart();
+            listContainer.accounts.get(selector).returnMoney(Double.parseDouble(price4.getText()));
+        } catch (Exception e) {
+            System.err.println("error: removing non existent item");
+        }
 
         //new code (debug test)
         item4.setText(item5.getText());
@@ -267,11 +297,14 @@ public class ViewOrderController implements Initializable {
 
         //totalAmount.setText(Double.toString(listContainer.accounts.get(selector).getAmountDue()));
 
-        listContainer.accounts.get(selector).addedItems.remove(4);
-        listContainer.accounts.get(selector).addedItemsPrices.remove(4);
-        listContainer.accounts.get(selector).subtractAmountInCart();
-
-        listContainer.accounts.get(selector).returnMoney(Double.parseDouble(price5.getText()));
+        try{
+            listContainer.accounts.get(selector).addedItems.remove(4);
+            listContainer.accounts.get(selector).addedItemsPrices.remove(4);
+            listContainer.accounts.get(selector).subtractAmountInCart();
+            listContainer.accounts.get(selector).returnMoney(Double.parseDouble(price5.getText()));
+        } catch (Exception e) {
+            System.err.println("error: removing non existent item");
+        }
 
         //new code (debug test)
         item5.setText(item6.getText());
@@ -303,11 +336,14 @@ public class ViewOrderController implements Initializable {
 
         //totalAmount.setText(Double.toString(listContainer.accounts.get(selector).getAmountDue()));
 
-        listContainer.accounts.get(selector).addedItems.remove(5);
-        listContainer.accounts.get(selector).addedItemsPrices.remove(5);
-        listContainer.accounts.get(selector).subtractAmountInCart();
-
-        listContainer.accounts.get(selector).returnMoney(Double.parseDouble(price6.getText()));
+        try{
+            listContainer.accounts.get(selector).addedItems.remove(5);
+            listContainer.accounts.get(selector).addedItemsPrices.remove(5);
+            listContainer.accounts.get(selector).subtractAmountInCart();
+            listContainer.accounts.get(selector).returnMoney(Double.parseDouble(price6.getText()));
+        } catch (Exception e) {
+            System.err.println("error: removing non existent item");
+        }
 
         //new code (debug test)
         item6.setText(item7.getText());
@@ -335,12 +371,14 @@ public class ViewOrderController implements Initializable {
 
         //totalAmount.setText(Double.toString(listContainer.accounts.get(selector).getAmountDue()));
 
-        listContainer.accounts.get(selector).addedItems.remove(9);
-        listContainer.accounts.get(selector).addedItemsPrices.remove(9);
-        listContainer.accounts.get(selector).subtractAmountInCart();
-
-        listContainer.accounts.get(selector).returnMoney(Double.parseDouble(price10.getText()));
-        //new code (debug test)
+        try{
+            listContainer.accounts.get(selector).addedItems.remove(9);
+            listContainer.accounts.get(selector).addedItemsPrices.remove(9);
+            listContainer.accounts.get(selector).subtractAmountInCart();
+            listContainer.accounts.get(selector).returnMoney(Double.parseDouble(price10.getText()));
+        } catch (Exception e) {
+            System.err.println("error: removing non existent item");
+        }
 
         item10.setText("label");
         price10.setText("0.00");
@@ -392,6 +430,7 @@ public class ViewOrderController implements Initializable {
         //displau total amount due
         totalAmount.setText(Double.toString(listContainer.accounts.get(selector).getAmountDue()));
 
+
     }
 
     public void removeItem9(MouseEvent mouseEvent) {
@@ -403,11 +442,14 @@ public class ViewOrderController implements Initializable {
 
         //totalAmount.setText(Double.toString(listContainer.accounts.get(selector).getAmountDue()));
 
-        listContainer.accounts.get(selector).addedItems.remove(8);
-        listContainer.accounts.get(selector).addedItemsPrices.remove(8);
-        listContainer.accounts.get(selector).subtractAmountInCart();
-
-        listContainer.accounts.get(selector).returnMoney(Double.parseDouble(price9.getText()));
+        try{
+            listContainer.accounts.get(selector).addedItems.remove(8);
+            listContainer.accounts.get(selector).addedItemsPrices.remove(8);
+            listContainer.accounts.get(selector).subtractAmountInCart();
+            listContainer.accounts.get(selector).returnMoney(Double.parseDouble(price9.getText()));
+        } catch (Exception e) {
+            System.err.println("error: removing non existent item");
+        }
 
         //new code (debug test)
         item9.setText(item10.getText());
@@ -426,11 +468,14 @@ public class ViewOrderController implements Initializable {
 
         //totalAmount.setText(Double.toString(listContainer.accounts.get(selector).getAmountDue()));
 
-        listContainer.accounts.get(selector).addedItems.remove(7);
-        listContainer.accounts.get(selector).addedItemsPrices.remove(7);
-        listContainer.accounts.get(selector).subtractAmountInCart();
-
-        listContainer.accounts.get(selector).returnMoney(Double.parseDouble(price8.getText()));
+        try{
+            listContainer.accounts.get(selector).addedItems.remove(7);
+            listContainer.accounts.get(selector).addedItemsPrices.remove(7);
+            listContainer.accounts.get(selector).subtractAmountInCart();
+            listContainer.accounts.get(selector).returnMoney(Double.parseDouble(price8.getText()));
+        } catch (Exception e) {
+            System.err.println("error: removing non existent item");
+        }
 
         //new code (debug test)
         item8.setText(item9.getText());
@@ -452,11 +497,14 @@ public class ViewOrderController implements Initializable {
 
         //totalAmount.setText(Double.toString(listContainer.accounts.get(selector).getAmountDue()));
 
-        listContainer.accounts.get(selector).addedItems.remove(6);
-        listContainer.accounts.get(selector).addedItemsPrices.remove(6);
-        listContainer.accounts.get(selector).subtractAmountInCart();
-
-        listContainer.accounts.get(selector).returnMoney(Double.parseDouble(price7.getText()));
+        try{
+            listContainer.accounts.get(selector).addedItems.remove(6);
+            listContainer.accounts.get(selector).addedItemsPrices.remove(6);
+            listContainer.accounts.get(selector).subtractAmountInCart();
+            listContainer.accounts.get(selector).returnMoney(Double.parseDouble(price7.getText()));
+        } catch (Exception e) {
+            System.err.println("error: removing non existent item");
+        }
 
         //new code (debug test)
         item7.setText(item8.getText());
